@@ -20,7 +20,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="overflow-x-hidden antialiased">
-        <Header />
+        {/* <Header /> */}
         {children}
         <PrismicPreview repositoryName={repositoryName} />
       </body>
@@ -34,7 +34,7 @@ async function Header() {
   const navigation = await client.getSingle("navigation");
 
   return (
-    <Bounded as="header" yPadding="sm">
+    <Bounded as="header" yPadding="sm" >
       <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-3 leading-none">
         <PrismicNextLink
           href="/"

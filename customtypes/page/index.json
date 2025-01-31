@@ -35,6 +35,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "blog_post": {
+              "type": "SharedSlice"
+            },
+            "blog_preview": {
+              "type": "SharedSlice"
+            },
             "hero": {
               "type": "SharedSlice"
             },

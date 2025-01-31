@@ -1,0 +1,53 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Population"
+						}
+					}
+				]
+			},
+			"date": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Adipisicing amet in consequat occaecat mollit esse Lorem culpa proident aliquip eu aliqua. Ea proident reprehenderit labore eiusmod duis."
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Incididunt aliqua fugiat quis reprehenderit nisi do deserunt cupidatat eiusmod adipisicing."
+						}
+					}
+				]
+			},
+			"tag": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Eu ullamco anim dolor amet."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
