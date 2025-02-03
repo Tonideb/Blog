@@ -104,6 +104,20 @@
 										}
 									]
 								}
+							],
+							[
+								"tag",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Qui aliquip nulla sint. Velit eu ea commodo est aliqua deserunt cillum velit officia minim ut est nostrud eiusmod. Occaecat cillum sunt ad."
+											}
+										}
+									]
+								}
 							]
 						]
 					}

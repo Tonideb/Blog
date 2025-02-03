@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 body {
-  background-color: #f5f5f5;
+  background-color: #bec6cc;
+}
+
+.intro-heading {
+  font-size: 120px;
+  line-height: 120px;
+  font-weight: 300;
 }

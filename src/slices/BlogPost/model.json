@@ -47,6 +47,15 @@
             "allowTargetBlank": true,
             "multi": "paragraph,strong,em"
           }
+        },
+        "author": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Author",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
         }
       },
       "items": {}

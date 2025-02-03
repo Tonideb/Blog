@@ -9,6 +9,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Heading } from "@/components/Heading";
 import CustomHeading from "@/components/CustomHeading";
+import BlogCard from "@/components/BlogCard";
 
 type BlogPreviewProps = SliceComponentProps<Content.BlogPreviewSlice>;
 
@@ -26,12 +27,12 @@ const BlogPreview = ({ slice }: BlogPreviewProps) => {
     ...new Set(slice.primary.categories.map((item) => asText(item.category))),
   ];
 
-  console.log(categories, "CATEGORIES");
+  // console.log(categories, "CATEGORIES");
 
   return (
     <section className="max-w-7xl mx-auto  py-2 h-full">
       {/* Navigation Tabs */}
-      <div className="tabs mb-12">
+      {/* <div className="tabs mb-12">
         <div className="flex">
           <ul className="flex flex-wrap gap-x-4 transition-all duration-300 overflow-hidden">
             {categories.map((category, index) => (
@@ -50,10 +51,14 @@ const BlogPreview = ({ slice }: BlogPreviewProps) => {
             ))}
           </ul>
         </div>
-      </div>
+      </div> */}
 
       {/* Blog Posts Grid with Animation */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-8 gap-1 mt-4">
+
+      <div className="mt-28 mb-12">
+        <h2 className="intro-heading font-light font-sans text-black">Blog</h2>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1.5 mt-4 w-full">
         <AnimatePresence mode="wait">
           {slice.primary.blogcard
             .filter(
@@ -68,36 +73,28 @@ const BlogPreview = ({ slice }: BlogPreviewProps) => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
+                whileHover={{
+                  y: -10, // Moves the card up by 10px
+                  transition: {
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 15,
+                  },
+                }}
               >
                 <PrismicNextLink field={item.link}>
-                  <div
-                    className="text-white p-6 flex flex-col h-[500px] rounded-xl w-full group"
-                    style={{ backgroundColor: `${asText(item.color)}` }}
-                  >
-                    <div>
-                      <div className="flex gap-1 mb-4">
-                        <div className="w-1 h-1 rounded-full bg-white" />
-                        <div className="w-1 h-1 rounded-full bg-white" />
-                        <div className="w-1 h-1 rounded-full bg-white" />
-                      </div>
-
-                      <h3 className="text-left mb-4 group-hover:underline transition duration-300">
-                        <PrismicRichText
-                          field={item.title}
-                          components={components}
-                        />
-                      </h3>
-
-                      <p className="text-md mb-4">
-                        <PrismicRichText field={item.author} />
-                      </p>
-                    </div>
-                    <div className="mt-auto">
-                      <p className="text-md opacity-80">
-                        <PrismicRichText field={item.date} />
-                      </p>
-                    </div>
-                  </div>
+                  <BlogCard
+                    backgroundColor={asText(item.color)}
+                    title={
+                      <PrismicRichText
+                        field={item.title}
+                        components={components}
+                      />
+                    }
+                    author={<PrismicRichText field={item.author} />}
+                    date={<PrismicRichText field={item.date} />}
+                    tag={<PrismicRichText field={item.tag} />}
+                  />
                 </PrismicNextLink>
               </motion.div>
             ))}

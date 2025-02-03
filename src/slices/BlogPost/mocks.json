@@ -46,6 +46,17 @@
 						}
 					}
 				]
+			},
+			"author": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Commodo culpa minim labore pariatur."
+						}
+					}
+				]
 			}
 		},
 		"items": []

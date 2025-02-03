@@ -82,6 +82,15 @@
                   "allowText": true,
                   "repeat": false
                 }
+              },
+              "tag": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Tag",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,strong,em"
+                }
               }
             }
           }
