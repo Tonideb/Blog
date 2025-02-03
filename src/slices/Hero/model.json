@@ -11,36 +11,42 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Hero",
       "primary": {
-        "text": {
+        "title": {
           "type": "StructuredText",
           "config": {
-            "label": "Text",
+            "label": "Title",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,heading1,strong,em"
+            "multi": "heading1,strong,em"
           }
         },
-        "buttonLink": {
-          "type": "Link",
+        "description": {
+          "type": "StructuredText",
           "config": {
-            "label": "Button Link",
+            "label": "Description",
             "placeholder": "",
-            "select": null
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
           }
         },
-        "buttonText": {
-          "type": "Text",
+        "socials": {
+          "type": "Group",
           "config": {
-            "label": "Button Text",
-            "placeholder": ""
-          }
-        },
-        "backgroundImage": {
-          "type": "Image",
-          "config": {
-            "label": "Background Image",
-            "constraint": {},
-            "thumbnails": []
+            "label": "Socials",
+            "repeat": true,
+            "fields": {
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              }
+            }
           }
         }
       },

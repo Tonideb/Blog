@@ -64,6 +64,70 @@
 										}
 									]
 								}
+							],
+							[
+								"category",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Tempor incididunt ex ipsum cupidatat."
+											}
+										}
+									]
+								}
+							],
+							[
+								"link",
+								{
+									"key": "731e1355-cdf1-4c4b-a9bd-eca855a8f394",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev",
+										"text": "not"
+									}
+								}
+							],
+							[
+								"author",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Sunt elit reprehenderit cillum adipisicing. Sint et do velit. Cupidatat officia aute est Lorem occaecat deserunt esse irure consectetur magna laborum ullamco elit."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			},
+			"categories": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"category",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Magna officia aliqua aliqua elit enim quis ad aute laborum eiusmod ipsum proident laboris. Ad dolor laborum cupidatat veniam et voluptate proident duis."
+											}
+										}
+									]
+								}
 							]
 						]
 					}

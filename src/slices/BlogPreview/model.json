@@ -18,6 +18,15 @@
             "label": "BlogCard",
             "repeat": true,
             "fields": {
+              "author": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Author",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,strong,em"
+                }
+              },
               "title": {
                 "type": "StructuredText",
                 "config": {
@@ -52,6 +61,44 @@
                   "placeholder": "",
                   "allowTargetBlank": true,
                   "multi": "paragraph"
+                }
+              },
+              "category": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Category",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,strong,em"
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              }
+            }
+          }
+        },
+        "categories": {
+          "type": "Group",
+          "config": {
+            "label": "Categories",
+            "repeat": true,
+            "fields": {
+              "category": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Category",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,strong,em"
                 }
               }
             }

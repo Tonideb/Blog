@@ -3,60 +3,49 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"text": {
+			"title": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
 						"type": "heading1",
 						"content": {
-							"text": "Steel",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Laboris adipisicing est duis in laboris in officia Lorem officia enim culpa consequat sint ut proident.",
-							"spans": []
-						},
-						"direction": "ltr"
+							"text": "Giving"
+						}
 					}
 				]
 			},
-			"buttonLink": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "http://google.com"
-				}
-			},
-			"buttonText": {
-				"__TYPE__": "FieldContent",
-				"value": "matter",
-				"type": "Text"
-			},
-			"backgroundImage": {
-				"__TYPE__": "ImageContent",
-				"url": "https://images.unsplash.com/photo-1616679312958-a86d9539afae?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MTk1MzAwNDZ8MA&ixlib=rb-4.0.3&q=85",
-				"alt": "orange fruit on white ceramic plate",
-				"origin": {
-					"id": "Jr7t5QviCDM",
-					"url": "https://images.unsplash.com/photo-1616679312958-a86d9539afae?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MTk1MzAwNDZ8MA&ixlib=rb-4.0.3&q=85",
-					"width": 3024,
-					"height": 4032
-				},
-				"width": 3024,
-				"height": 4032,
-				"edit": {
-					"background": "transparent",
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Adipisicing ad pariatur adipisicing dolor elit deserunt do nostrud. Voluptate non do officia magna ex anim laboris. Minim veniam eu ullamco eu anim ea quis quis sit elit ea veniam."
+						}
 					}
-				},
-				"thumbnails": {}
+				]
+			},
+			"socials": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"link",
+								{
+									"key": "307aa795-69f5-491e-b790-69c30dc9be2b",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com",
+										"text": "crew"
+									}
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": [

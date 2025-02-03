@@ -269,6 +269,16 @@ export type BlogPostSlice = prismic.SharedSlice<
  */
 export interface BlogPreviewSliceDefaultPrimaryBlogcardItem {
   /**
+   * Author field in *BlogPreview → Default → Primary → BlogCard*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_preview.default.primary.blogcard[].author
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  author: prismic.RichTextField;
+
+  /**
    * Title field in *BlogPreview → Default → Primary → BlogCard*
    *
    * - **Field Type**: Rich Text
@@ -307,6 +317,41 @@ export interface BlogPreviewSliceDefaultPrimaryBlogcardItem {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   color: prismic.RichTextField;
+
+  /**
+   * Category field in *BlogPreview → Default → Primary → BlogCard*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_preview.default.primary.blogcard[].category
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  category: prismic.RichTextField;
+
+  /**
+   * Link field in *BlogPreview → Default → Primary → BlogCard*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_preview.default.primary.blogcard[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Item in *BlogPreview → Default → Primary → Categories*
+ */
+export interface BlogPreviewSliceDefaultPrimaryCategoriesItem {
+  /**
+   * Category field in *BlogPreview → Default → Primary → Categories*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_preview.default.primary.categories[].category
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  category: prismic.RichTextField;
 }
 
 /**
@@ -323,6 +368,18 @@ export interface BlogPreviewSliceDefaultPrimary {
    */
   blogcard: prismic.GroupField<
     Simplify<BlogPreviewSliceDefaultPrimaryBlogcardItem>
+  >;
+
+  /**
+   * Categories field in *BlogPreview → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_preview.default.primary.categories[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  categories: prismic.GroupField<
+    Simplify<BlogPreviewSliceDefaultPrimaryCategoriesItem>
   >;
 }
 
@@ -357,54 +414,53 @@ export type BlogPreviewSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *Hero → Default → Primary → Socials*
+ */
+export interface HeroSliceDefaultPrimarySocialsItem {
+  /**
+   * Link field in *Hero → Default → Primary → Socials*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.socials[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
  * Primary content in *Hero → Default → Primary*
  */
 export interface HeroSliceDefaultPrimary {
   /**
-   * Text field in *Hero → Default → Primary*
+   * Title field in *Hero → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.text
+   * - **API ID Path**: hero.default.primary.title
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  text: prismic.RichTextField;
+  title: prismic.RichTextField;
 
   /**
-   * Button Link field in *Hero → Default → Primary*
+   * Description field in *Hero → Default → Primary*
    *
-   * - **Field Type**: Link
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.buttonLink
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   * - **API ID Path**: hero.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  buttonLink: prismic.LinkField<
-    string,
-    string,
-    unknown,
-    prismic.FieldState,
-    never
-  >;
+  description: prismic.RichTextField;
 
   /**
-   * Button Text field in *Hero → Default → Primary*
+   * Socials field in *Hero → Default → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.buttonText
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: hero.default.primary.socials[]
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  buttonText: prismic.KeyTextField;
-
-  /**
-   * Background Image field in *Hero → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.backgroundImage
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  backgroundImage: prismic.ImageField<never>;
+  socials: prismic.GroupField<Simplify<HeroSliceDefaultPrimarySocialsItem>>;
 }
 
 /**
@@ -889,10 +945,12 @@ declare module "@prismicio/client" {
       BlogPostSliceDefault,
       BlogPreviewSlice,
       BlogPreviewSliceDefaultPrimaryBlogcardItem,
+      BlogPreviewSliceDefaultPrimaryCategoriesItem,
       BlogPreviewSliceDefaultPrimary,
       BlogPreviewSliceVariation,
       BlogPreviewSliceDefault,
       HeroSlice,
+      HeroSliceDefaultPrimarySocialsItem,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
