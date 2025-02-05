@@ -26,7 +26,7 @@ export default async function RootLayout({
           <Header />
           {children}
         </BackgroundWrapper>
-        <Footer />
+        {/* <Footer /> */}
         <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>
@@ -46,9 +46,9 @@ async function Header() {
           className="text-xl font-semibold tracking-tight"
         >
           {/* <PrismicText field={settings.data.siteTitle} /> */}
-          LifeLong Club
+          <img className="w-[55px] h-auto" src="https://res.cloudinary.com/dzxalfzwh/image/upload/v1738775177/dpyneajoo9z6jlyhwelc.png" alt="logo" />
         </PrismicNextLink>
-        <nav>
+        {/* <nav>
           <ul className="flex flex-wrap gap-6 md:gap-10">
             {navigation.data?.links.map((item) => (
               <li
@@ -61,7 +61,7 @@ async function Header() {
               </li>
             ))}
           </ul>
-        </nav>
+        </nav> */}
       </div>
     </Bounded>
   );

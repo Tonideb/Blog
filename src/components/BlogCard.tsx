@@ -14,9 +14,9 @@ export default function BlogCard({
   tag,
 }: BlogCardProps) {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto h-full">
       <article
-        className="relative rounded-xl px-6 py-8 min-h-[400px] text-black"
+        className="relative rounded-xl px-6 py-8 min-h-[400px] h-full flex flex-col justify-between text-black"
         style={{ backgroundColor }}
       >
         {/* Decorative dots */}

@@ -30,9 +30,15 @@ const BlogPreview = ({ slice }: BlogPreviewProps) => {
   // console.log(categories, "CATEGORIES");
 
   return (
-    <section className="max-w-7xl mx-auto  py-2 h-full">
+    <section className="max-w-7xl mx-auto  mb-12 h-full">
+      {/* Blog Posts Grid with Animation */}
+
+      <div className="my-16">
+        <h2 className="intro-heading font-light font-sans text-black">Blog</h2>
+      </div>
+
       {/* Navigation Tabs */}
-      {/* <div className="tabs mb-12">
+      <div className="tabs mb-8">
         <div className="flex">
           <ul className="flex flex-wrap gap-x-4 transition-all duration-300 overflow-hidden">
             {categories.map((category, index) => (
@@ -51,13 +57,8 @@ const BlogPreview = ({ slice }: BlogPreviewProps) => {
             ))}
           </ul>
         </div>
-      </div> */}
-
-      {/* Blog Posts Grid with Animation */}
-
-      <div className="mt-28 mb-12">
-        <h2 className="intro-heading font-light font-sans text-black">Blog</h2>
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1.5 mt-4 w-full">
         <AnimatePresence mode="wait">
           {slice.primary.blogcard
@@ -74,13 +75,14 @@ const BlogPreview = ({ slice }: BlogPreviewProps) => {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 whileHover={{
-                  y: -10, // Moves the card up by 10px
+                  y: -10, 
                   transition: {
                     type: "spring",
                     stiffness: 300,
                     damping: 15,
                   },
                 }}
+                className="h-full"
               >
                 <PrismicNextLink field={item.link}>
                   <BlogCard
