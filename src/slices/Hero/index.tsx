@@ -22,9 +22,9 @@ type HeroProps = SliceComponentProps<Content.HeroSlice>;
 
 const Hero = ({ slice }: HeroProps) => {
   return (
-<Bounded as="section" yPadding="sm">
+<Bounded as="section" yPadding="sm" >
 
-    <section className="relative  text-black md:max-w-7xl lg:max-w-7xl mx-auto mb-24 pt-8">
+    <section className="relative  text-black md:max-w-7xl lg:max-w-7xl mx-auto pt-8">
       {/* Header Section */}
       <div className="flex justify-between items-start">
         <div>
