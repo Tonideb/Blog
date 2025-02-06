@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import { PrismicRichText } from "@/components/PrismicRichText";
 import { PrismicNextImage } from "@prismicio/next";
+import { Bounded } from "@/components/Bounded";
 
 /**
  * Props for `BlogPost`.
@@ -16,16 +17,19 @@ export type BlogPostProps = SliceComponentProps<Content.BlogPostSlice>;
  */
 const BlogPost = ({ slice }: BlogPostProps): JSX.Element => {
   return (
+
+      <Bounded as="section" yPadding="sm">
+
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className="my-24"
-    >
+      >
       <div className="bg-white max-w-6xl mx-auto items-center border  shadow-sm rounded-2xl py-6">
         <Link
           href="/"
           className="inline-flex items-center text-emerald-600 hover:text-emerald-700 mb-12 group ml-36 pt-16"
-        >
+          >
           <ChevronLeft className="h-4 w-4 mr-2 transition-transform group-hover:-translate-x-1" />
           Blog
         </Link>
@@ -74,6 +78,7 @@ const BlogPost = ({ slice }: BlogPostProps): JSX.Element => {
         </article>
       </div>
     </section>
+          </Bounded>
   );
 };
 
