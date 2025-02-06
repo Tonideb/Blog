@@ -43,7 +43,7 @@ const BlogPreview = ({ slice }: BlogPreviewProps) => {
 
         {/* Navigation Tabs */}
         <div className="tabs mb-8">
-          <div className="flex justify-center">
+          <div className="flex justify-start">
             <ul className="flex flex-wrap justify-start items-center gap-2 sm:gap-4">
               {categories.map((category, index) => (
                 <li key={index}>
