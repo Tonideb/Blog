@@ -32,14 +32,14 @@ const BlogPreview = ({ slice }: BlogPreviewProps) => {
 
   return (
     <Bounded as="section" yPadding="sm">
-      <section className="max-w-7xl mx-auto  mb-12 h-full">
+      <section className="mb-12 h-full">
         {/* Blog Posts Grid with Animation */}
 
-        <div className="my-16">
+        {/* <div className="my-16">
           <h2 className="intro-heading font-light font-sans text-black">
             Blog
           </h2>
-        </div>
+        </div> */}
 
         {/* Navigation Tabs */}
         <div className="tabs mb-8">

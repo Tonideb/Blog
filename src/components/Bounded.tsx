@@ -20,14 +20,14 @@ export function Bounded({
     <Comp
       data-collapsible={collapsible}
       className={clsx(
-        "px-6",
-        yPadding === "sm" && "py-8 md:py-10",
+        "px-2",
+        yPadding === "sm" && "py-6 md:py-10",
         yPadding === "base" && "py-20 md:py-28",
         yPadding === "lg" && "py-32 md:py-48",
         className,
       )}
     >
-      <div className="mx-auto w-full max-w-7xl">{children}</div>
+      <div className="mx-auto w-full max-w-[90rem]">{children}</div>
     </Comp>
   );
 }

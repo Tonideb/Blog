@@ -56,16 +56,20 @@ const BlogPost = ({ slice }: BlogPostProps): JSX.Element => {
                         <PrismicRichText field={slice.primary.author} />
                       </p>
                     </div>
-                    <div className="text-start border-t border-black/40 py-4 w-full">
-                      <p className="text-gray-700 text-md font-thin mr-2 px-1.5 rounded-full w-full">
-                        <PrismicRichText field={slice.primary.date} />
-                      </p>
-                    </div>
-                    <div className="text-start border-t border-black/40 py-4 w-full">
-                      <p className="bg-black/10 inline-block px-2 py-1 rounded text-md  font-thin mr-2">
-                        <PrismicRichText field={slice.primary.tag} />
-                      </p>
-                    </div>
+                    {slice.primary.date && (
+                      <div className="text-start border-t border-black/40 py-4 w-full">
+                        <p className="text-gray-700 text-md font-thin mr-2 px-1.5 rounded-full w-full">
+                          <PrismicRichText field={slice.primary.date} />
+                        </p>
+                      </div>
+                    )}
+                    {slice.primary.tag && (
+                      <div className="text-start border-t border-black/40 py-4 w-full">
+                        <p className="bg-black/10 inline-block px-2 py-1 rounded text-md  font-thin mr-2">
+                          <PrismicRichText field={slice.primary.tag} />
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
 
