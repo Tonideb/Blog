@@ -14,9 +14,9 @@ export default function BlogCard({
   tag,
 }: BlogCardProps) {
   return (
-    <div className="max-w-7xl mx-auto h-full">
+    <div className="max-w-7xl mx-auto h-full min-h-[460px] sm:min-h-[500px] md:min-h-[640px] lg:min-h-[700px]">
       <article
-        className="relative rounded-xl px-6 py-8 min-h-[400px] h-full flex flex-col text-black"
+        className="relative rounded-xl px-6 py-8 min-h-[460px] sm:min-h-[500px] md:min-h-[640px] lg:min-h-[700px] h-auto flex flex-col text-black"
         style={{ backgroundColor }}
       >
         {/* Decorative dots */}
@@ -24,10 +24,10 @@ export default function BlogCard({
         <div className="absolute top-4 right-4 w-2 h-2 bg-black/20 rounded-full" />
 
         {/* Title - Ensures uniform spacing */}
-        <div className="flex-1 flex items-start my-24">
-          <h3 className="text-[2.75rem] text-left leading-[1.1] font-light">
+        <div className="flex-1 flex items-end mb-4">
+          <h2 className="text-left font-normal whitespace-normal tracking-normal">
             {title}
-          </h3>
+          </h2>
         </div>
 
         {/* Content - Consistent placement */}

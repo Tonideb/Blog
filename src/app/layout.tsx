@@ -40,7 +40,7 @@ async function Header() {
 
   return (
     <Bounded as="header" yPadding="sm">
-      <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-3 leading-none">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-6 leading-none">
         <PrismicNextLink
           href="/"
           className="text-xl font-semibold tracking-tight"
