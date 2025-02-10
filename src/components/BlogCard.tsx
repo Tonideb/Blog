@@ -25,7 +25,7 @@ export default function BlogCard({
 
         {/* Title - Ensures uniform spacing */}
         <div className="flex-1 flex items-end mb-4">
-          <h2 className="text-left font-normal whitespace-normal tracking-normal">
+          <h2 className="text-left font-normal whitespace-normal tracking-normal ">
             {title}
           </h2>
         </div>
